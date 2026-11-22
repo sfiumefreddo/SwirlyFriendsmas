@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Swirliest Friendsmas 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0f2540;--night2:#173a60;--line:#6b97bd;--snow:#f4f8fb;--mute:#b9d0e4;--gold:#f0c76e;--berry:#b3202a;--paper:#fff8e7;--ink:#14304f;--kraft:#d9c9a3;--cream:#f1e6c8;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--night);color:var(--snow);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;overflow-x:hidden}
+.page{position:relative;min-height:100dvh;display:flex;justify-content:center;padding:28px 18px}
+#snow{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.sn{position:absolute;top:-10px;background:#e6f3fb;border-radius:50%;opacity:.75;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(24px,110vh)}}
+main{position:relative;width:100%;max-width:400px;text-align:center}
+.flakes{display:flex;justify-content:center;gap:12px;color:var(--gold)}
+.flakes svg{width:26px;height:26px}
+.flakes svg:nth-child(odd){color:#bfe3f5}
+h1{font-family:"Mountains of Christmas",Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(34px,10vw,46px);line-height:1.08;margin:10px 0 16px;color:var(--snow)}
+.cane{height:8px;border-radius:4px;margin:0 0 22px;background:repeating-linear-gradient(90deg,var(--berry) 0 16px,var(--snow) 16px 32px)}
+.date{color:var(--gold);font-size:17px;margin:0 0 20px}
+label{display:block;font-size:15px;color:var(--mute);margin:12px 0 6px}
+input{width:100%;font:inherit;font-size:18px;text-align:center;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b1d33;color:var(--snow)}
+input:focus-visible,button:focus-visible,.env:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.err{min-height:24px;margin:10px 0;font-size:15px;color:#ffb8b8}
+.btn{font:inherit;font-size:17px;color:var(--snow);background:var(--berry);border:1px solid #e8c36a;border-radius:10px;padding:12px 26px;cursor:pointer}
+.btn:hover{background:#c92b36}
+.btn.quiet{background:var(--night2);border-color:var(--line);font-size:15px;padding:9px 18px}
+.stage{min-height:420px}
+.wrap{position:relative;height:340px}
+.hint{position:absolute;top:18px;left:0;right:0;transition:opacity .4s}
+.hint b{display:block;font-family:"Mountains of Christmas",Georgia,serif;font-size:28px;font-weight:700}
+.hint span{color:var(--mute);font-size:15px}
+.env{position:absolute;left:50%;bottom:14px;width:260px;height:172px;margin-left:-130px;cursor:pointer;perspective:800px;animation:bob 2.4s ease-in-out infinite;border-radius:6px}
+.env.open{animation:none;cursor:default}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.eb{position:absolute;inset:0;background:var(--kraft);border-radius:6px;z-index:0}
+.ep{position:absolute;left:20px;right:20px;top:14px;height:142px;background:var(--paper);border-radius:4px;padding:16px 8px;color:var(--ink);z-index:2;transition:transform .9s ease .6s}
+.env.open .ep{transform:translateY(-135px)}
+.ep small{display:block;font-size:13px;color:#7a6a4a}
+.ep strong{display:block;font-family:"Mountains of Christmas",Georgia,serif;font-size:34px;line-height:1.1;color:var(--berry);margin:8px 0 4px}
+.ep svg{width:18px;height:18px;color:#c99a2e}
+.ef{position:absolute;inset:0;background:var(--cream);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:6px;z-index:3}
+.fl{position:absolute;left:0;right:0;top:0;height:104px;background:var(--berry);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .6s ease,z-index 0s .3s;z-index:4}
+.env.open .fl{transform:rotateX(180deg);z-index:1}
+.seal{position:absolute;left:calc(50% - 18px);top:86px;width:36px;height:36px;border-radius:50%;background:var(--gold);color:#8a1a22;display:flex;align-items:center;justify-content:center;z-index:5;transition:opacity .3s}
+.seal svg{width:22px;height:22px}
+.env.open .seal{opacity:0}
+.done{visibility:hidden}
+.done.show{visibility:visible}
+@media (prefers-reduced-motion:reduce){.sn,.env{animation:none}.ep,.fl{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="sf" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2"/></g></symbol>
+<symbol id="st" viewBox="0 0 24 24"><polygon fill="currentColor" points="12,2 14.9,8.6 22,9.3 16.6,14 18.2,21 12,17.3 5.8,21 7.4,14 2,9.3 9.1,8.6"/></symbol>
+</svg>
+<div class="page">
+<div id="snow" aria-hidden="true"></div>
+<main>
+<svg role="img" aria-label="Santa with a finger to his lips, saying shh" viewBox="0 0 120 120" style="width:124px;height:124px;display:block;margin:0 auto"><path d="M22 54C20 22 58 6 86 20C98 27 100 40 98 54Z" fill="#c9252f"/><circle cx="95" cy="20" r="9" fill="#f4f8fb"/><ellipse cx="60" cy="70" rx="28" ry="24" fill="#f6c9a6"/><path d="M30 66C24 100 44 114 60 114C76 114 96 100 90 66C80 82 70 86 60 86C50 86 40 82 30 66Z" fill="#f4f8fb" stroke="#c7d8e6" stroke-width="1.5"/><rect x="14" y="48" width="92" height="18" rx="9" fill="#f4f8fb" stroke="#c7d8e6" stroke-width="1.5"/><path d="M45 71q5-5 10 0M65 71q5-5 10 0" stroke="#14304f" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="60" cy="77" r="5.5" fill="#e58b7a"/><ellipse cx="50" cy="87" rx="11" ry="6" fill="#f4f8fb" stroke="#c7d8e6" stroke-width="1.5"/><ellipse cx="70" cy="87" rx="11" ry="6" fill="#f4f8fb" stroke="#c7d8e6" stroke-width="1.5"/><rect x="56.5" y="88" width="7" height="22" rx="3.5" fill="#f6c9a6" stroke="#d9a982" stroke-width="1.2"/></svg>
+<h1>The Swirliest Friendsmas 2026</h1>
+<div class="cane"></div>
+<div id="stage" class="stage"></div>
+</main>
+</div>
+<script>
+const DATA={"Amanda":{"s":"Fq5CRY5dm1hhC13yvCwvDA==","i":"vxYligQvZdiNGL2p","c":"SI7DyoEWeLI+Zu9ChHX5jLSEFUXVebCV"},"Casey":{"s":"MJLwCTcl6pON3wwElkJE0A==","i":"QskDt9SPq59+pL2n","c":"KCrEIxOttYtDjKyeOt8sLjDRAYj/Iw=="},"Chris A":{"s":"KZgCFbhP+o8dZK6FNyjltw==","i":"gAPjYxQoUw8LAR33","c":"7RCJ7bsCSdGBBvElo+uDZ3Pdgetx"},"Chris C":{"s":"UoX4iSTAe1iNboYPrm3YAg==","i":"/V6LL6M64NSnONpt","c":"Z1QQtptvVZgM1t7NOot+CV+VmlhYt6A="},"Danielle":{"s":"Ng3FVMYzXIQveg0piohWHA==","i":"gCoz/Ast3uPyDDDo","c":"XBrhWu/ONTBoJBzmejVpvEvpambNZA=="},"Steven":{"s":"55RE7wAZ0l80vfGJlhsMHA==","i":"VAG//DhSK4xv4HNR","c":"cULllYWk2bynBMokmkENsW9jTF0gmQA="}};
+const names=Object.keys(DATA);
+const norm=s=>s.toLowerCase().replace(/\./g,'').replace(/\s+/g,' ').trim();
+const st=document.getElementById('stage');
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function unlock(name,pin){
+const d=DATA[name];
+const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveKey']);
+const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(d.s),iterations:200000,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(d.i)},key,b64(d.c));
+return new TextDecoder().decode(pt)}
+function landing(){
+st.innerHTML='<p class="date">December 20th, 2026</p><form id="f" autocomplete="off"><label for="nm">Your name</label><input id="nm" type="text" autocapitalize="words" spellcheck="false"><label for="pin">Your PIN</label><input id="pin" type="password" inputmode="numeric" maxlength="6"><div id="er" class="err" role="alert"></div><button class="btn" type="submit">Find my letter</button></form>';
+const f=document.getElementById('f');
+f.oninput=()=>{document.getElementById('er').textContent=''};
+f.onsubmit=go;
+document.getElementById('nm').focus()}
+async function go(e){
+e.preventDefault();
+const er=document.getElementById('er');
+const v=norm(document.getElementById('nm').value);
+const pin=document.getElementById('pin').value.trim();
+if(!v||!pin){er.textContent='Enter your name and PIN.';return}
+if(v==='chris'){er.textContent='Two Chrises here. Enter Chris A or Chris C.';return}
+const hit=names.find(n=>norm(n)===v);
+er.textContent='Checking…';
+try{
+if(!hit)throw 0;
+const who=await unlock(hit,pin);
+letter(hit,who)}
+catch(x){er.textContent='That name and PIN don’t match. Try again.'}}
+function letter(me,who){
+st.innerHTML='<div class="wrap"><div id="hint" class="hint"><b>A letter for '+me+'</b><span>Tap the envelope to open it</span></div><div id="env" class="env" role="button" tabindex="0" aria-label="Open your letter"><div class="eb"></div><div class="ep"><small>You’re Secret Santa for</small><strong id="who"></strong><svg aria-hidden="true"><use href="#st"/></svg><small style="margin-top:8px">See you December 20th, 2026</small></div><div class="ef"></div><div class="fl"></div><div class="seal"><svg aria-hidden="true"><use href="#sf"/></svg></div></div></div><button id="done" class="btn quiet done">Hide it</button>';
+document.getElementById('who').textContent=who;
+const env=document.getElementById('env');let opened=false;
+const open=()=>{if(opened)return;opened=true;env.classList.add('open');env.removeAttribute('tabindex');env.setAttribute('aria-label','Letter opened');document.getElementById('hint').style.opacity=0;setTimeout(()=>{const d=document.getElementById('done');d.classList.add('show');d.focus()},1700)};
+env.onclick=open;
+env.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}};
+document.getElementById('done').onclick=landing;
+env.focus()}
+const sn=document.getElementById('snow');
+for(let i=0;i<30;i++){const s=document.createElement('i');s.className='sn';const z=3+Math.random()*5;s.style.cssText='left:'+(Math.random()*100)+'%;width:'+z+'px;height:'+z+'px;animation-duration:'+(8+Math.random()*9)+'s;animation-delay:'+(-Math.random()*14)+'s';sn.appendChild(s)}
+landing();
+</script>
+</body>
+</html>
